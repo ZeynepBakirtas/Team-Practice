@@ -9,17 +9,16 @@ public class Task01 {
     Bu ana kadar aldigi toplam yolu ve yere vurma sayısını bulan do while code blogu create ediniz.
        */
         double high = 240;
-        double toplamYol = high;
+        double toplamYol = 0;
         int count = 0;//yere vurma sayisi
 
         do{
-            high = (high*3)/4;
-            toplamYol += (high*3)/4;
-            if(high<=100){
-                break;
-            }
+            toplamYol += high;
+            high += 0.75;
+            toplamYol += high;
             count++;
-        }while(true);
+        }while(high>100);
+        toplamYol += high;
 
         System.out.println("Topun aldigi toplam yol: " + toplamYol + "cm Topun yere vurma sayisi: "+ count);
 

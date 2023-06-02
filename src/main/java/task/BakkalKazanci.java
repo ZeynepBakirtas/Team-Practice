@@ -39,7 +39,7 @@ public class BakkalKazanci {
          * 6. Adım : getOrtalamaninAltindaKazancGünleri() adlı method oluşturun.
          *            for döngüsü ile tüm günleri ortalama kazanç ile karşılaştır
          *            ortalama kazançtan aşağıysa o günleri return yap.
-         * */
+        */
         Scanner input = new Scanner(System.in);
 
         String gunler[] = {"Pazartesi", "Sali", "Carsamba", "Persembe", "Cuma", "Cumartesi", "Pazar"};

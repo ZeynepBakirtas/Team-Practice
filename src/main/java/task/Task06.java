@@ -1,8 +1,8 @@
-package sorubankasi;
+package task;
 
 import java.util.Scanner;
 
-public class Task02 {
+public class Task06 {
     public static void main(String[] args) {
         /* TASK :
  Kullanicidan aldigimiz 8 elemanli arrayin icinde

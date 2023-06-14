@@ -1,10 +1,9 @@
-package sorubankasi;
+package task;
 
-import java.awt.*;
 import java.text.DecimalFormat;
 import java.util.Scanner;
 
-public class Task01 {
+public class SehirMesafeleri {
     public static void main(String[] args) {
         /*
    A şehrinden uçmak isteyen bir yolcu B şehrine 500km C şehrine  700km  D şehrine  900 km mesafededir.

@@ -32,54 +32,54 @@ public class OgrenciListesi {
         studentList.add("fatma yildiz");
         studentList.add("nihal gul");
 
-        start();
 
+        while (true){
+            Scanner input = new Scanner(System.in);
+            System.out.println("========================== İŞLEMLER =======================\r\n"
+                    + "   ____________________              ____________________    \n"
+                    + "   | 1-OGRENCI EKLEME   |           |  2-OGRENCI SILME  |    \n"
+                    + "   ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯             ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯     \n"
+                    + "   | 3-ISIM DEGISIKLIGI |           | 4-OGRENCI SAYISI  |   \n"
+                    + "   ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯             ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯     \n"
+                    + "   |  5-OGRENCI ARAMA   |           |    6-CIKIS        |    \n"
+                    + "   ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯             ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯     \n");
 
-    }
+            System.out.print("LUTFEN GIRMEK ISTEDIGINIZ ISLEMI SECİNİZ : ");
 
-    private static void start() {
-        Scanner input = new Scanner(System.in);
-        System.out.println("========================== İŞLEMLER =======================\r\n"
-                + "   ____________________              ____________________    \n"
-                + "   | 1-OGRENCI EKLEME   |           |  2-OGRENCI SILME  |    \n"
-                + "   ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯             ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯     \n"
-                + "   | 3-ISIM DEGISIKLIGI |           | 4-OGRENCI SAYISI  |   \n"
-                + "   ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯             ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯     \n"
-                + "   |  5-OGRENCI ARAMA   |           |    6-CIKIS        |    \n"
-                + "   ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯             ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯     \n");
+            String option = input.next();
 
-        System.out.print("ISLEM SECİNİZ : ");
-
-        String option = input.next();
-
-        switch (option) {
-            case "1":
-                addStudent();
-                break;
-            case "2":
-                removeStudent();
-                break;
-            case "3":
-                changeName();
-                break;
-            case "4":
-                numberOfAllStudent();
-                break;
-            case "5":
-                searchStudent();
-                break;
-            case "6":
-                System.out.println("----------Ogrenci listenizin son hali--------");
-                System.out.println(studentList);
-                break;
-            default:
-                System.out.println("Yanlis değer girdiniz!..");
-                start();
+            switch (option) {
+                case "1":
+                    addList();
+                    break;
+                case "2":
+                    removeList();
+                    break;
+                case "3":
+                    changeListElement();
+                    break;
+                case "4":
+                    listSize();
+                    break;
+                case "5":
+                    listElementSearch();
+                    break;
+                case "6":
+                    System.out.println("----------Ogrenci listenizin son hali--------");
+                    System.out.println(studentList);
+                    break;
+                default:
+                    System.out.println("Yanlis değer girdiniz!..");
+            }
         }
 
     }
 
-    public static List<String> addStudent() {
+
+
+
+
+    public static List<String> addList() {
         System.out.println("Lutfen eklemek istediginiz ogrenci ismini giriniz...");
         String student = input.nextLine().toLowerCase();
 
@@ -87,14 +87,14 @@ public class OgrenciListesi {
         if (studentList.contains(student)) {
             System.out.println("Girdiginiz isim listede bulunmaktadir...");
         } else {
+            System.out.println("Girdiginiz isim listeye eklenmistir");
             studentList.add(student);
         }
 
-        start();
         return studentList;
     }
 
-    public static List<String> removeStudent() {
+    public static List<String> removeList() {
 
         System.out.println("Lutfen silmek istediginiz ogrenci ismini giriniz...");
         String student = input.nextLine().toLowerCase();
@@ -104,13 +104,12 @@ public class OgrenciListesi {
             System.out.println("Girdiginiz isim listeden cikartilmistir...");
         } else {
             System.out.println("Girdiginiz isim listede bulunmamaktadir...");
-            removeStudent();
+            removeList();
         }
-        start();
         return studentList;
     }
 
-    public static List<String> changeName() {
+    public static List<String> changeListElement () {
         System.out.println("Lutfen guncellemek istediginiz ogrenci ismini giriniz...");
         String oldName = input.nextLine().toLowerCase();
 
@@ -121,19 +120,17 @@ public class OgrenciListesi {
             studentList.set(studentList.indexOf(oldName), newName);
         } else {
             System.out.println("Girdiginiz isim listede bulunmamaktadir...");
-            changeName();
+            changeListElement();
         }
 
-        start();
         return studentList;
     }
 
-    public static void numberOfAllStudent() {
+    public static void listSize() {
         System.out.println("Ogrenci sayisi: " + studentList.size());
-        start();
     }
 
-    public static void searchStudent() {
+    public static void listElementSearch() {
         System.out.println("Lutfen aramak istediginiz ogrenci ismini giriniz...");
         String student = input.nextLine().toLowerCase();
 
@@ -143,7 +140,6 @@ public class OgrenciListesi {
             System.out.println("Girdiginiz isim listede bulunmamaktadir...");
         }
 
-        start();
     }
 
 }

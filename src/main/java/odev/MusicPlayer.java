@@ -26,10 +26,9 @@ public class MusicPlayer {
         playerList.add("this is the life");
         playerList.add("litaliano");
         playerList.add("merhabalar");
-        menu();
-    }
 
-    private static void menu() {
+
+
         Scanner input = new Scanner(System.in);
         System.out.println("========================== İŞLEMLER =======================\r\n"
                 + "   ____________________             ____________________        \n"
@@ -63,7 +62,6 @@ public class MusicPlayer {
                 break;
             default:
                 System.out.println("Yanlis deger girdiniz!..");
-                menu();
         }
 
     }
@@ -72,7 +70,6 @@ public class MusicPlayer {
         Collections.sort(playerList);
         System.out.println("Listenizdeki sarkilar alfabetik olarak siralanmistir...");
 
-        menu();
         return playerList;
     }
 
@@ -88,7 +85,6 @@ public class MusicPlayer {
             playerList.add(song);
         }
 
-        menu();
         return playerList;
     }
 
@@ -104,7 +100,6 @@ public class MusicPlayer {
             System.out.println("Silmek istediginiz sarki listenizde bulunmamaktadir!");
         }
 
-        menu();
         return playerList;
 
     }
@@ -117,13 +112,11 @@ public class MusicPlayer {
             playerList.clear();
             System.out.println("Listedeki sarkilarin tamami silinmistir");
         } else if (answer.equals("x")) {
-            menu();
         } else {
             System.out.println("Lütfen secenekleri dogru giriniz");
             deleteAllSong();
         }
 
-        menu();
         return playerList;
     }
 }

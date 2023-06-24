@@ -1,0 +1,12 @@
+
+    ==>Bizde verilen sayilari toplamamizi istediginde bunlari ne kadar sayi girecegini bilmedigimiz icin farkli methodlar
+        olusturarak is yapmak yerine varargs kullaniriz
+    >Cunku kullanici farkli sayidaki sayilari toplamak isteyebilir
+    >Her ihtimal icin bir method olusturmak mumkun degildir
+    >Java farkli sayidaki parametrelerin hepsini kabul eden bir yapi olusturdu.
+    >Bu yapiya Varargs denir
+    >Varargs arkada Array yapisini kullanir (forEach loop kullanabiliriz
+
+    NOTE 1: Bir method parantezinde birden fazla Varargs kullanilamaz
+    NOTE 2: Eger bir method parantezinde birden fazla parametre kullanilacaksa Varargs sonda olmalidir
+

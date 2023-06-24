@@ -6,7 +6,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
-public class MusicPlayer {
+public class MusicPlayer extends Methodlar{
 
     /*
       Bir müzik çalma listesi uygulaması geliştiriyorsunuz.
@@ -45,10 +45,10 @@ public class MusicPlayer {
 
         switch (option) {
             case "1":
-                addSong();
+                addList(playerList);
                 break;
             case "2":
-                deleteSong();
+                removeList(playerList);
                 break;
             case "3":
                 orderList();
@@ -74,35 +74,9 @@ public class MusicPlayer {
     }
 
 
-    private static List<String> addSong() {
-        System.out.println("Lütfen eklemek istediginiz sarkiyi yaziniz...");
-        String song = input.nextLine().toLowerCase().trim().replaceAll("\\s+", " ");
 
-        if (playerList.contains(song)) {
-            System.out.println("Bu sarki listenizde bulunmaktadir...");
-        } else {
-            System.out.println("Sectiginiz sarki eklenmistir...");
-            playerList.add(song);
-        }
 
-        return playerList;
-    }
 
-    private static List<String> deleteSong() {
-
-        System.out.println("Sarki ismi giriniz...");
-        String song = input.nextLine().toLowerCase().trim().replaceAll("\\s+", " ");
-
-        if (playerList.contains(song)) {
-            playerList.remove(song);
-            System.out.println("Istediginiz sarki silinmistir...");
-        } else {
-            System.out.println("Silmek istediginiz sarki listenizde bulunmamaktadir!");
-        }
-
-        return playerList;
-
-    }
 
     private static List<String> deleteAllSong() {
         System.out.println("Listenin Tamamini silmek istediginizden emin misiniz? Evet ise (E) Hayir ise (X) tuslayiniz?");

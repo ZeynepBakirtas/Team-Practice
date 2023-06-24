@@ -1,0 +1,73 @@
+
+    =======================LOCAL DATE====================
+    ==> LocalDate sınıfı, Java'da tarih işlemleri yapmak için kullanılan bir sınıftır. Bu sınıf, yıl, ay ve gün bilgilerini
+    temsil eder ve tarihle ilgili birçok işlemi gerçekleştirmek için kullanılabilir. LocalDate sınıfı, java.time paketinde
+    yer almaktadır ve Java 8'den itibaren kullanıma sunulmuştur.
+
+        =====LocalDate sınıfının bazı faydalı işlevleri şunlardır====
+
+    Tarih oluşturma: LocalDate.now() yöntemiyle geçerli tarihi alabilirsiniz.
+
+    Ayrıca, of() yöntemiyle belirli bir yıl, ay ve gün değerleriyle tarih oluşturabilirsiniz.
+
+    Tarih aritmetiği: plusDays(), plusWeeks(), plusMonths(), plusYears() gibi yöntemlerle tarihleri artırabilir veya azaltabilirsiniz.
+    Benzer şekilde, minusDays(), minusWeeks(), minusMonths(), minusYears() yöntemleriyle tarihlerden çıkarma işlemleri yapabilirsiniz.
+
+    Tarih karşılaştırması: isEqual(), isBefore(), isAfter() gibi yöntemlerle tarihleri karşılaştırabilirsiniz.
+
+    Tarih formatlama: format() yöntemiyle DateTimeFormatter nesneleri kullanarak tarihi belirli bir formata dönüştürebilirsiniz.
+
+    Diğer işlevler: getYear(), getMonth(), getDayOfMonth(), getDayOfWeek() gibi yöntemlerle tarihin yıl, ay, gün ve
+    haftanın hangi günü olduğu gibi bilgilerine erişebilirsiniz.
+
+    LocalDate sınıfı, birçok senaryoda tarihle ilgili işlemleri kolaylaştırır. Örneğin, takvim uygulamaları,
+    randevu sistemleri, süre hesaplamaları ve veritabanı işlemleri gibi birçok alanda kullanışlıdır.
+
+    =====================LOCAL TIME==========================
+
+    LocalTime sınıfı, Java'da saat işlemleri yapmak için kullanılan bir sınıftır. Bu sınıf, saat, dakika, saniye ve milisaniye
+     gibi zaman bileşenlerini temsil eder. LocalTime sınıfı, java.time paketinde yer almaktadır ve Java 8'den itibaren kullanıma sunulmuştur.
+
+    ==> LocalTime sınıfının bazı faydalı işlevleri şunlardır
+
+    Saat oluşturma: LocalTime.now() yöntemiyle geçerli saati alabilirsiniz. Ayrıca, of() yöntemiyle belirli saat, dakika
+     ve saniye değerleriyle saat oluşturabilirsiniz.
+
+    Saat aritmetiği: plusHours(), plusMinutes(), plusSeconds(), plusNanos() gibi yöntemlerle saatleri artırabilir veya
+    azaltabilirsiniz. Benzer şekilde, minusHours(), minusMinutes(), minusSeconds(), minusNanos() yöntemleriyle saatlerden çıkarma işlemleri yapabilirsiniz.
+
+    Saat karşılaştırması: isEqual(), isBefore(), isAfter() gibi yöntemlerle saatleri karşılaştırabilirsiniz.
+
+    Saat formatlama: format() yöntemiyle DateTimeFormatter nesneleri kullanarak saati belirli bir formata dönüştürebilirsiniz.
+
+    Diğer işlevler: getHour(), getMinute(), getSecond(), getNano() gibi yöntemlerle saatin saat, dakika, saniye ve
+    nanosaniye bileşenlerine erişebilirsiniz.
+
+    LocalTime sınıfı, birçok senaryoda zaman işlemlerini kolaylaştırır. Örneğin, rezervasyon sistemleri,
+    zamanlama işlemleri, otomasyon sistemleri ve loglama gibi birçok alanda kullanışlıdır.
+
+
+            ==> Zaman formati nasil degistirilir?
+
+      DateTime class ta kullanilan tarih saat formatlari
+
+              HH : mm ==> 24 lu saat sistemi
+              hh : mm ==> 12 li saat sistemi
+              hh : mm a ==> 12 li saat sistemi AM, PM gosterilir
+              HH : mm : ss ==> 24 lu saat sistemi
+              HH : MM ==> yanlis fomat MM aylar icin kullanilir
+              "mm" minute demektir, "MM" months demektir.
+
+              dd-MM-yyyy ==> gun ay yil
+              MMM ==> Aug
+              MMMM ==> August
+
+              DateTimeFormatter dtf1 = DateTimeFormatter.ofPattern("HH : mm");
+              String formattedMyCurrentTime = dtf1.format(myCurrentTime);
+              System.out.println("formattedMyCurrentTime = " + formattedMyCurrentTime);
+
+              ==============LOCAL DATE TIME===========
+
+              >>Saat ve tarihi verir
+
+

@@ -1,0 +1,40 @@
+
+        1)Ayni data type indaki coklu datalari depolamak icin Array kullaniriz
+        2)Arraylerin bir negatif yonu var; icine koyacaginiz eleman sayisini en basta belirlemek zorundasiniz
+        3)Arrayler eleman sayisinda esnek degildirler. Bu yuzden Java "Arraylist" adli yeni bir yapi olusturdu
+        Bu yapi eleman sayisinda esnektir. Hic eleman koymazsaniz eleman sayisini sifir olarak ayarlar.
+        4) Arraylist yerine sadece List de diyebiliriz
+        5) Java Arraylelisleri olusturduktan sonra Arrayleri iptal etmedi cunku;
+            1)Array ler super hizlidir.
+            2)Array ler memory de cok az yer kaplarlar
+            3)Bu nedenle eleman sayisi belli olan datalari depolamak icin Arrayler tercih edilir
+        6) Array ler primitive data type lari ve non-primitive lerin reference larini depolayabilir
+        ama arraylistler "non-primitive" data type larini depolar. Bu yuzden arraylist ler array lerden daha fazla yer kaplar
+
+
+         ==> Arraylist nasil olusturulur?
+             ArrayList<Integer> ages = new ArrayList<>(); ==> non-static
+
+         ==> Arraylist console a nasil yazdirilir
+             System.out.println(ages);
+
+         ==> Arraylistlere eleman eklemek icin add() methodunu kullaniriz
+         ==> Eleman sayisi size() methodu ile bulunur
+         ==> get() methodu index kullanarak istedigimiz elemani almaya yarar. List in return type i ne ise ona gore sepete koyariz
+         ==> set() methodu ile spesifik eleman degisikligi yapariz
+
+         ==> remove() methodu eleman ile kullanilirsa ilk gorunumu siler
+         ==> ve o elemani silip silmedigini ifade eden true yada false return eder
+
+         ==>remove() methodu index ile kullanilirsa bu indexte silmis oldugu datayi return eder
+
+         ==> ArrayList olustururken sag tarafa(constructor) Arraylist yazmak zorundasiniz
+
+          ==========Kisa yoldan bir list nasil olusturulur?=========
+
+         List<Character> initials = List.of('a','c','a','k');
+          System.out.println(initials);//[a, c, d, k]
+
+          ==> List.of() methodu degistirilemez bir list olusturmak icin kullanilir,
+          bu nedenle list uzerinde degisiklik yapmaya yonelik methodlari desteklemez ama diger list methodlarani kullanabiliriz
+

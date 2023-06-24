@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class OgrenciListesi {
+public class OgrenciListesi extends Methodlar{
     static Scanner input = new Scanner(System.in);
     static List<String> studentList = new ArrayList<>();
 
@@ -50,10 +50,10 @@ public class OgrenciListesi {
 
             switch (option) {
                 case "1":
-                    addList();
+                    addList(studentList);
                     break;
                 case "2":
-                    removeList();
+                    removeList(studentList);
                     break;
                 case "3":
                     changeListElement();
@@ -79,35 +79,9 @@ public class OgrenciListesi {
 
 
 
-    public static List<String> addList() {
-        System.out.println("Lutfen eklemek istediginiz ogrenci ismini giriniz...");
-        String student = input.nextLine().toLowerCase();
 
 
-        if (studentList.contains(student)) {
-            System.out.println("Girdiginiz isim listede bulunmaktadir...");
-        } else {
-            System.out.println("Girdiginiz isim listeye eklenmistir");
-            studentList.add(student);
-        }
 
-        return studentList;
-    }
-
-    public static List<String> removeList() {
-
-        System.out.println("Lutfen silmek istediginiz ogrenci ismini giriniz...");
-        String student = input.nextLine().toLowerCase();
-
-        if (studentList.contains(student)) {
-            studentList.remove(student);
-            System.out.println("Girdiginiz isim listeden cikartilmistir...");
-        } else {
-            System.out.println("Girdiginiz isim listede bulunmamaktadir...");
-            removeList();
-        }
-        return studentList;
-    }
 
     public static List<String> changeListElement () {
         System.out.println("Lutfen guncellemek istediginiz ogrenci ismini giriniz...");

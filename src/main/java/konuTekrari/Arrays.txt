@@ -1,0 +1,29 @@
+
+    SORU ====>>>> Arrayler console a nasil yazdirilir?
+    toString() methodu nu kullanmadan sadece array ismi ile yazdirirsaniz java o Array in adresini yazdirir
+    System.out.println(Arrays.toString( stdNames));
+
+    Arrayler diger collectionlardan cok cok daha hizlidir (superfast).
+    Arrayler diger collectionlardan daha az memory kullanirlar
+
+     ============BINARY SEARCH=========
+    1) binarySearch() methodunu sort() kullanmadan kullanmayiniz, cunku binarySearch() mantigi sirali
+        elemanlar icin gecerlidir.
+    2) binarySearch() methodu var olan elemanlar icin size o elemanin index ini verir.
+        binarySearch() methodundan aldiginiz index 0 veya 0 dan buyuk ise bu o eleman arrayde var demektir 3) binarySearch() methodu olmayan elemanlar icin negatif tamsayi degeri verir.
+        "-" isaretinin anlami o eleman yok demektir
+        "sayi" ise o eleman olsaydi kacinci eleman olurdu demektir.
+
+
+      ========SORT=======
+    Note 1: sort() methodu sayisal data type lari kucukten buyuge siralar (ascending order)
+    Note 2: sort() methodu String data type lari alfabetik olarak siralar (alphabetical order)
+    Note 3: ascending order + alphabetical order ==> Natural Order
+    Note 4: sort() methodu array elemanlarini "Natural Order" a gore siralar
+
+
+    ==> Bir Array in elemanlari Array ise bu Arrayler Multidimensional Array dir
+    NOTE: multidimensional arrayleri console a yazdirmak icin toString() methodu degil, deepToString() methodunu kullaniriz
+
+    loopun bir dongusu bittiği anda arraye assign ettigimiz variablelar sabit kalır,
+    ancak loop icinde olusturdugumuz variablelar yok olur loop her calıstıgında tekrar olusur
